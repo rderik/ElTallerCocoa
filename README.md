@@ -4,4 +4,4 @@ I'm using this app to test and keep track of concepts I learn about macOS develo
 
 # Index
 
-Usin IB and nibs ....................... GenerateRandomText example
+Using InterfaceBuilder and XIB/NIB ....................... GenerateRandomText example
