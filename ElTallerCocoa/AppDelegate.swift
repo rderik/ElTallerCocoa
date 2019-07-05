@@ -12,9 +12,15 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
+    var randomTextGeneratorWindowController: RandomTextGeneratorWindowController?
 
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        let mainWindowController = RandomTextGeneratorWindowController(windowNibName: "RandomTextGeneratorWindowController")
+        mainWindowController.showWindow(self)
+        self.randomTextGeneratorWindowController = mainWindowController
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
